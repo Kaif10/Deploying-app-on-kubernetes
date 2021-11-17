@@ -60,7 +60,29 @@ Now we can run our application - in the main directory type the following comman
 Let’s now create a Docker image for our application. In the main directory add a file named Dockerfile.
 <working directory>/main/Dockerfile
 
+ 
+ Deploy app
+ 
+TIP - Kubernetes Deployment Controller can be created using the kubectl run command or by configuring a YAML file (which is the recommended way).
+In the working directory, create the hello-app-deployment.yaml file and add the following instructions.
 
+Ok, let’s create Deployment Controller - we’ll use the kubectl create command.
+$ k create -f hello-app-deployment.yaml
+deployment.apps/hello-app created
+ 
+ When we run kubectl get pods, we can see that our Pod is just created (check container creation state).
+$ k get pods
+ 
+ 
+We already know from the state that Pod couldn’t download the image. Let’s look closer to the problem by checking logs - type the following command kubectl logs <pod name>, and kubectl describe pod <pod name>.
+$ k logs -l app=hello-app
+ 
+ 
+After a while, the Pod should change state to Running. You can also run kubectl delete pod <pod name> to delete the Pod. 
+ 
+ 
+Ok, since we already know that Pod works, let’s check if application responds. We can use port forwarding to check if our app works by running kubectl port-forward <pod name>.
+$ k port-forward hello-app-74bbd87f67–4rxln 8080:8080
 
 
 
