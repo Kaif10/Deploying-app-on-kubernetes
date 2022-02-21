@@ -1,6 +1,7 @@
 # Deploying-app-on-kubernetes
 
-Installation / Create Cluster
+## Installation / Create Cluster
+
 We already know how the Kubernetes clusters work, so it’s time to use the tools
 
 Kubectl is a command-line interface for running commands which will be processed on Kubernetes clusters. With kubectl, you can deploy applications, check and manage cluster resources, view logs and much more.
@@ -62,8 +63,7 @@ Let’s now create a Docker image for our application. In the main directory add
 <working directory>/main/Dockerfile
 
  
-
- Deploy app
+## Deploy app
  
 TIP - Kubernetes Deployment Controller can be created using the kubectl run command or by configuring a YAML file (which is the recommended way).
 In the working directory, create the hello-app-deployment.yaml file and add the following instructions.
