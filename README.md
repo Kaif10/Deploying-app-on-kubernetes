@@ -55,7 +55,7 @@ minikube Ready  master 6m36s v1.14.3
  create a working directory, then inside of it add another directory named main and place the file hello.go into it. The directory structure should look like this:
 <working directory>/main/hello.go
   
-In the hello.go file, add the go code, which will allow us to run a simple server that we’ll use to test our deployment.
+In the hello.go file, add the following go code (https://github.com/Kaif10/Deploying-app-on-kubernetes/blob/main/main/hello.go), which will allow us to run a simple server that we’ll use to test our deployment.
   
 Now we can run our application - in the main directory type the following command go run hello.go to run our simple server. When you visit the browser at http://localhost:8080/api/hello, you should see “Hello World”. Now we know that our application works so we can go to the next step - packing the application into the Docker container.
   
