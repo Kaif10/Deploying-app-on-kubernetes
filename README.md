@@ -1,12 +1,13 @@
 # Deploying-app-on-kubernetes
 
 Installation / Create Cluster
-We already know how the Kubernetes clusters work, so it’s time to move to the tools that we’ll use.
+We already know how the Kubernetes clusters work, so it’s time to use the tools
+
 Kubectl is a command-line interface for running commands which will be processed on Kubernetes clusters. With kubectl, you can deploy applications, check and manage cluster resources, view logs and much more.
-Minikube creates and implements the environment of the Kubernetes physical cluster in your local environment.
+Minikube creates and implements the environment of the Kubernetes physical cluster i local environment.
 VirtualBox is a cross-platform virtualization tool.
 
-Let’s first check the version of minikube by typing minikube version command.
+check the version of minikube by typing minikube version command.
 $ minikube version
 minikube version: v1.3.1
 
@@ -53,7 +54,7 @@ minikube Ready  master 6m36s v1.14.3
  create a working directory, then inside of it add another directory named main and place the file hello.go into it. The directory structure should look like this:
 <working directory>/main/hello.go
   
-In the hello.go file, add the following code, which will allow us to run a simple server that we’ll use to test our deployment.
+In the hello.go file, add the go code, which will allow us to run a simple server that we’ll use to test our deployment.
   
 Now we can run our application - in the main directory type the following command go run hello.go to run our simple server. When you visit the browser at http://localhost:8080/api/hello, you should see “Hello World”. Now we know that our application works so we can go to the next step - packing the application into the Docker container.
   
@@ -61,6 +62,7 @@ Let’s now create a Docker image for our application. In the main directory add
 <working directory>/main/Dockerfile
 
  
+
  Deploy app
  
 TIP - Kubernetes Deployment Controller can be created using the kubectl run command or by configuring a YAML file (which is the recommended way).
